@@ -2,7 +2,7 @@ import React from 'react'
 
 const navbar = () => {
   return (
-    <nav className='w-full bg-gradient-to-b from-white-400 to-gray-100 px-6 py-4 flex justify-between items-center'>
+    <nav className='w-full bg-linear-to-b from-white-400 to-gray-100 px-6 py-4 flex justify-between items-center'>
         {/* Logo */}
         <div className='flex-1'>
         <h1 className='text-2xl font-bold'>Finkano</h1>
