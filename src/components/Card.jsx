@@ -1,8 +1,8 @@
 import React from "react";
 
-const Card = ({ title, value, children }) => {
+const Card = ({ title, value, children, className}) => {
   return (
-    <div className="bg-white rounded-xl p-6 shadow relative">
+    <div className={`bg-white rounded-xl p-6 shadow relative ${className}`}>
       <h3 className="text-gray-500 text-md font-bold">{title}</h3>
       <p className="text-2xl font-bold">{value}</p>
 
@@ -12,7 +12,7 @@ const Card = ({ title, value, children }) => {
       </div>
 
       {/* extra content */}
-      <div className="mt-4 w-30 rounded-full">
+      <div className="mt-4">
         {children}
       </div>
     </div>
