@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from '../components/Card';
 
 const Home = () => {
   return (
@@ -51,19 +52,20 @@ const Home = () => {
                   <div><p className="text-2xl font-light"><span className='font-bold'>Wallets |</span> Total 6 wallets</p></div>
 
                   {/* 3 CARDS */}
-                  <div className="grid grid-cols-3 mt-5 gap-4">
+                  <div className="grid grid-cols-3 gap-4 mt-5">
 
-                      <div className="bg-white rounded-lg p-4 shadow">
-                          Card 1
-                      </div>
+                      <Card title="$ USD" value="$8,420">
+                          <p className="text-green-600 text-center bg-green-300 rounded-full font-bold">Active</p>
+                      </Card>
 
-                      <div className="bg-white rounded-lg p-4 shadow">
-                          Card 2
-                      </div>
+                      <Card title="€ EUR" value="$3,120">
+                          <p className="text-red-700 text-center bg-red-400 rounded-full font-bold">Inactive</p>
+                      </Card>
 
-                      <div className="bg-white rounded-lg p-4 shadow">
-                          Card 3
-                      </div>
+                      <Card title="£ GBP" value="$15,000">
+                          <p className="text-green-600 text-center bg-green-300 rounded-full font-bold">Active</p>
+                      </Card>
+
                   </div>
               </div>
 
