@@ -5,6 +5,7 @@ import heroImg from './assets/hero.png'
 import Navbar from './components/navbar'
 import './App.css'
 import Home from './pages/home'
+import Hero from './pages/hero'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <Hero />
       <Home />
     </>
   )
