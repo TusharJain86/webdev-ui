@@ -1,5 +1,6 @@
 import React from 'react'
 import ATMCard from '../components/ATMCard';
+import Activity from '../components/Activity';
 
 const Home = () => {
     return (
@@ -41,12 +42,10 @@ const Home = () => {
 
                 <div className='flex flex-col mt-10'>
                     <h2 className="font-bold text-3xl">Recent Activities</h2>
-                    <p className='mt-2 text-2xl'><span className='font-bold text-red-500'>$1500.00</span> spent out of <span className='font-bold text-green-500'>$8000.00</span></p>
-                    <div className='bg-gray-200 shadow-md mt-4 rounded-full h-10 overflow-hidden'>
-                        <div className="bg-orange-400 h-10 w-50 rounded-full flex items-center justify-center">
-                            <p className="font-light text-orange-400 cursor-pointer hover:text-yellow-400 transition">Spent</p>
-                        </div>
-                    </div>
+                    <Activity title="Payment Received" amount="$1,200.00" user="John Doe" time="2 hours ago" type="income"></Activity>
+                    <Activity title="Electricity Bill" amount="$80.00" user="Utility Company" time="5 hours ago" type="expense"></Activity>
+                    <Activity title="Salary Received" amount="$5,000.00" user="Monthly salary" time="1 day ago" type="income"></Activity>
+                    <Activity title="Grocery Shopping" amount="$150.00" user="Walmart" time="1 day ago" type="expense"></Activity>
                 </div>
 
                 
