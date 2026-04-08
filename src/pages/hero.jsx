@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from '../components/Card';
 
+
 const Hero = () => {
+
+    const [balance, setbalance] = useState(10000);
+
+    const increaseBalance= () =>{
+        setbalance(balance+1000);
+    };
+
+    const decreaseBalance=() =>{
+        setbalance(balance-1000);
+    }
+
     return (
         <div>
             {/*top most section */}
@@ -22,8 +34,21 @@ const Hero = () => {
 
                         {/* LEFT TEXT */}
                         <div>
-                            <p className="text-2xl font-light">Total Balance</p>
-                            <p className="text-3xl font-bold">$62,789.00</p>
+                            <p className="text-4xl font-light">Total Balance</p>
+                            <div className="flex justify-between items-center mt-2">
+                            
+                            <p className="text-3xl font-bold">
+                                ${balance.toLocaleString()}.00
+                            </p>
+                            <div className='flex gap-3 mt-3'>
+                                <button onClick={increaseBalance} className='bg-zinc-900 text-white shadow font-bold px-3 py-1 rounded-lg cursor-pointer hover:scale-102'>
+                                    +
+                                </button>
+                                <button onClick={decreaseBalance} className='bg-white text-black shadow font-bold px-3 py-1 rounded-lg cursor-pointer hover:scale-102'>
+                                    -
+                                </button>
+                            </div>
+                            </div>
                             <p className="text-2xl font-light">
                                 <span className="text-green-500 font-bold">+5% </span>
                                 from last month
