@@ -18,13 +18,20 @@ const Home = () => {
                         <ATMCard className="bg-gradient-to-r from-gray-900 to-gray-700 text-white" status="PIN BANK" accountNumber="**** **** 4444" number="1234" expiry="02/27" cvv="123" />
                         <ATMCard className="bg-black text-yellow-500" status="DOR BANK" accountNumber="**** **** 5205" number="5678" expiry="08/27" cvv="456" />
                         <ATMCard className="bg-gradient-to-r from-blue-800 to-purple-900 text-white" status="ABC BANK" accountNumber="**** **** 8562" number="2468" expiry="04/28" cvv="789" />
-                        <ATMCard className="bg-gradient-to-r from-gray-400 to-gray-700 text-white" accountNumber="Add more card+"/>
-                        <ATMCard className="bg-gradient-to-r from-gray-400 to-gray-700 text-white" accountNumber="Add more card+"/>
-                        <ATMCard className="bg-gradient-to-r from-gray-400 to-gray-700 text-white" accountNumber="Add more card+"/>
-                        <ATMCard className="bg-gradient-to-r from-gray-400 to-gray-700 text-white" accountNumber="Add more card+"/>
-                        
+                        <ATMCard className="bg-gradient-to-r from-gray-400 to-gray-700 text-white" accountNumber="Add more card+" />
+                        <ATMCard className="bg-gradient-to-r from-gray-400 to-gray-700 text-white" accountNumber="Add more card+" />
+
                     </div>
+
+                    <div className='bg-gray-800 w-full mt-10 rounded-lg shadow text-xl text-white font-bold p-20'>
+                        <form>
+                            <input type='text' placeholder='Enter the text' />
+                            <button className='bg-gray-300 rounded-lg px-3 py-1'>Submit</button>
+                        </form>
+                    </div>
+
                 </div>
+
 
                 {/* RIGHT SIDE */}
                 <div className="w-211 bg-white rounded-xl p-4 shadow">
@@ -82,7 +89,7 @@ const Home = () => {
                 </div>
             </div>
 
-        
+
 
         </div>
     );
