@@ -1,21 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import Navbar from './components/navbar'
-import './App.css'
+import Footer from './components/Footer'
 import Home from './pages/home'
 import Hero from './pages/hero'
-import Footer from './components/Footer'
+import Report from './pages/Report'
+import { Routes, Route } from "react-router-dom"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <Navbar />
-      <Hero />
-      <Home />
+
+      <Routes>
+        {/* Home page */}
+        <Route path="/" element={
+          <>
+            <Hero />
+            <Home />
+          </>
+        } />
+
+        {/* Report page */}
+        <Route path="/Report" element={<Report />} />
+      </Routes>
+
       <Footer />
     </>
   )

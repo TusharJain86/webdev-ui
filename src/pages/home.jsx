@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ATMCard from '../components/ATMCard';
 import Activity from '../components/Activity';
 import Footer from '../components/Footer';
 
 const Home = () => {
+    const [title, setTitle] = useState('')
+    const submitHandler = (e) =>{
+        e.preventDefault()
+        console.log('form submitted');
+    }
+
     return (
         // ✅ PAGE WRAPPER
         <div className="min-h-screen flex flex-col">
@@ -24,9 +30,11 @@ const Home = () => {
                     </div>
 
                     <div className='bg-gray-800 w-full mt-10 rounded-lg shadow text-xl text-white font-bold p-20'>
-                        <form>
-                            <input type='text' placeholder='Enter the text' />
-                            <button className='bg-gray-300 rounded-lg px-3 py-1'>Submit</button>
+                        <form onSubmit={(e)=>{submitHandler(e)}}>
+                            <input className=' border-2 border-amber-50 w-full rounded-lg h-10' type='text' placeholder=' Enter the text' onChange={()=>{
+                                console.log(e.target.value);
+                            }} />
+                            <button className='bg-gray-300 mt-3 rounded-lg text-black px-3 py-1'>Submit</button>
                         </form>
                     </div>
 
