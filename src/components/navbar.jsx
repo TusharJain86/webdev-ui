@@ -19,7 +19,7 @@ const Navbar = () => {
             <li className='hover:text-orange-500 cursor-pointer'>Account</li>
 
             <li className='hover:text-orange-500 cursor-pointer'>
-                <Link to="/reports">Reports</Link>
+                <Link to="/Report">Reports</Link>
             </li>
         </ul>
 

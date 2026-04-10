@@ -23,7 +23,7 @@ function App() {
         <Route path="/Report" element={<Report />} />
       </Routes>
 
-      <Footer />
+      
     </>
   )
 }
