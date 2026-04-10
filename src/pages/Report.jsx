@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
 
 const Report = () => {
+  
+  const [title, setTitle] = useState("")
+  const [details, setDetails] = useState("")
 
   const submitHandler = (e) =>{
     e.preventDefault()
-    console.log(title);
+    console.log(title, details);
 
     setTitle("")
+    setDetails("")
   }
-
-  const [title, setTitle] = useState("")
 
   return (
     <div className='h-screen bg-zinc-900 text-white lg:flex'>
@@ -24,7 +26,13 @@ const Report = () => {
           setTitle(e.target.value);
         }}/>
 
-        <textarea type='text' className=' outline-none w-full h-32 px-5 py-2 border-2 rounded' placeholder='Write details'></textarea>
+        <textarea type='text' className=' outline-none w-full h-32 px-5 py-2 border-2 rounded' placeholder='Write details'
+        value={details}
+        onChange={(e)=>{
+          setDetails(e.target.value);
+        }}>
+
+        </textarea>
 
         <button className='bg-white text-black rounded px-5 py-2 w-full outline-none '>Add Notes</button>
       </form>
