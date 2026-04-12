@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ATMCard from '../components/ATMCard';
 import Activity from '../components/Activity';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const [title, setTitle] = useState('')
@@ -34,7 +35,9 @@ const Home = () => {
                             <input className=' border-2 border-amber-50 w-full rounded-lg h-10' type='text' placeholder=' Enter the text' onChange={()=>{
                                 console.log(e.target.value);
                             }} />
-                            <button className='bg-gray-300 mt-3 rounded-lg text-black px-3 py-1'>Submit</button>
+                            <button className='bg-gray-300 mt-3 rounded-lg text-black px-3 py-1'>
+                                <Link to="/Report">Submit</Link>
+                            </button>
                         </form>
                     </div>
 
