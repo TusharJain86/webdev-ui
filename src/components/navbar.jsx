@@ -12,7 +12,9 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <ul className='flex gap-6 justify-center flex-1'>
-            <li className='hover:text-orange-500 cursor-pointer'>Overview</li>
+            <li className='hover:text-orange-500 cursor-pointer'>
+                <Link to="/">Overview</Link>
+            </li>
             <li className='hover:text-orange-500 cursor-pointer'>Activity</li>
             <li className='hover:text-orange-500 cursor-pointer'>Manage</li>
             <li className='hover:text-orange-500 cursor-pointer'>Program</li>
