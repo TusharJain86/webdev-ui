@@ -7,6 +7,13 @@ const Report = () => {
 
   const [task, setTask] = useState([])
 
+  const deleteNote =(idx) =>{
+    const copyTask = [...task];
+
+    copyTask.splice(idx, 1)
+    setTask(copyTask)
+  }
+
   const submitHandler = (e) =>{
     e.preventDefault()
 
@@ -44,14 +51,16 @@ const Report = () => {
 
       <div className=' p-10 lg:w-1/2 bg-gray-900 lg:border-2'>
       <h1 className='text-4xl font-bold text-yellow-300'>Recent Notes and Reports</h1>
-      <div className='flex flex-wrap items-start justify-start mt-5 gap-5 h-full overflow-auto'>
+      <div className='flex flex-wrap items-start justify-start mt-5 gap-5 h-[90%] overflow-auto'>
         {task.map(function(elem, idx){
           return <div key={idx} className='flex justify-between flex-col items-start h-52 w-40 relative rounded text-black py-9 px-4 bg-[url("https://static.vecteezy.com/system/resources/previews/037/152/677/non_2x/sticky-note-paper-background-free-png.png")] bg-cover'>
             <div>
             <h3 className='leading-tight text-xl font-bold'>{elem.title}</h3>
             <p className='mt-4 leading-tight font-medium text-gray-600'>{elem.details}</p>
             </div>
-            <button className='w-full mt-5 bg-red-600 py-1 text-xs rounded font-bold text-white cursor-pointer active:scale-102'> Delete</button>
+            <button onClick={()=>{
+              deleteNote(idx)
+            }} className='w-full mt-5 bg-red-600 py-1 text-xs rounded font-bold text-white cursor-pointer active:scale-102'> Delete</button>
           </div>
         })}
         
