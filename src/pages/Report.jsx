@@ -1,13 +1,18 @@
 import React, { useState } from 'react'
-
+import { X } from "lucide-react";
 const Report = () => {
   
   const [title, setTitle] = useState("")
   const [details, setDetails] = useState("")
 
+  const [task, setTask] = useState([])
+
   const submitHandler = (e) =>{
     e.preventDefault()
-    console.log(title, details);
+
+    const copyTask =[...task];
+    copyTask.push({title, details})
+    setTask(copyTask)
 
     setTitle("")
     setDetails("")
@@ -34,15 +39,23 @@ const Report = () => {
 
         </textarea>
 
-        <button className='bg-white text-black rounded px-5 py-2 w-full outline-none '>Add Notes</button>
+        <button className='bg-white text-black rounded px-5 py-2 w-full outline-none active:scale-102'>Add Notes</button>
       </form>
 
       <div className=' p-10 lg:w-1/2 bg-gray-900 lg:border-2'>
       <h1 className='text-4xl font-bold text-yellow-300'>Recent Notes and Reports</h1>
-      <div className='flex flex-wrap mt-5 gap-5 h-full overflow-auto'>
-        <div className='h-55 w-45 bg-white rounded'></div>
-        <div className='h-55 w-45 bg-white rounded'></div>
-      </div>
+      <div className='flex flex-wrap items-start justify-start mt-5 gap-5 h-full overflow-auto'>
+        {task.map(function(elem, idx){
+          return <div key={idx} className='flex justify-between flex-col items-start h-52 w-40 relative rounded text-black py-9 px-4 bg-[url("https://static.vecteezy.com/system/resources/previews/037/152/677/non_2x/sticky-note-paper-background-free-png.png")] bg-cover'>
+            <div>
+            <h3 className='leading-tight text-xl font-bold'>{elem.title}</h3>
+            <p className='mt-4 leading-tight font-medium text-gray-600'>{elem.details}</p>
+            </div>
+            <button className='w-full mt-5 bg-red-600 py-1 text-xs rounded font-bold text-white cursor-pointer active:scale-102'> Delete</button>
+          </div>
+        })}
+        
+        </div>
       </div>
     </div>
   )
