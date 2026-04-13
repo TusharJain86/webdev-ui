@@ -116,7 +116,7 @@ const Hero = () => {
                             <h2 className="font-bold">Total Income</h2>
                             <p>View your income in a certain period of time</p>
                             <div className='mt-4 flex justify-center'>
-                                <img src='/public/share.png' alt="chart" className='w-full object-cover' />
+                                <img src='/share.png' alt="chart" className='w-full object-cover' />
                             </div>
                         </div>
 

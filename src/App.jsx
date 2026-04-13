@@ -3,6 +3,7 @@ import Footer from './components/Footer'
 import Home from './pages/home'
 import Hero from './pages/hero'
 import Report from './pages/Report'
+import Program from './pages/Program'
 import { Routes, Route } from "react-router-dom"
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
 
         {/* Report page */}
         <Route path="/Report" element={<Report />} />
+        {/* Program page */}
+        <Route path="/Program" element={<Program />} />
       </Routes>
 
       

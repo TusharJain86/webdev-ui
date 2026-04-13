@@ -17,7 +17,9 @@ const Navbar = () => {
             </li>
             <li className='hover:text-orange-500 cursor-pointer'>Activity</li>
             <li className='hover:text-orange-500 cursor-pointer'>Manage</li>
-            <li className='hover:text-orange-500 cursor-pointer'>Program</li>
+            <li className='hover:text-orange-500 cursor-pointer'>
+                <Link to="/Program">Program</Link>
+            </li>
             <li className='hover:text-orange-500 cursor-pointer'>Account</li>
 
             <li className='hover:text-orange-500 cursor-pointer'>
