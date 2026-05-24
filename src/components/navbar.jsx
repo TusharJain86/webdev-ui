@@ -15,7 +15,7 @@ const Navbar = () => {
             <li className='hover:text-orange-500 cursor-pointer'>
                 <Link to="/">Overview</Link>
             </li>
-            <li className='hover:text-orange-500 cursor-pointer'>Activity</li>
+            <li className='hover:text-orange-500 cursor-pointer'>GIF Search</li>
             <li className='hover:text-orange-500 cursor-pointer'>Manage</li>
             <li className='hover:text-orange-500 cursor-pointer'>
                 <Link to="/Program">Program</Link>
